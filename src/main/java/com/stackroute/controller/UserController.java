@@ -26,11 +26,11 @@ public class UserController {
         user.setUserPass(request.getParameter("t2"));
 
         AddService addService=new AddService();
-        String str=addService.message(user);
+        String message=addService.message(user);
 
         ModelAndView mv=new ModelAndView();
         mv.setViewName("display");
-        mv.addObject("result",str);
+        mv.addObject("result",message);
 
         return mv;
 
